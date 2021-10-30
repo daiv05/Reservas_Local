@@ -9,14 +9,14 @@ namespace Reservas_Local.Models
 {
     public class Facultad
     {
-        [Key]
+        public int FacultadID { get; set; }
         public String NombreFacu { get; set; }
         public ICollection<Escuela> Escuelas { get; set; }
     }
-
+    /*
     public class FacultadContext : DbContext
     {
         public FacultadContext() { }
         public DbSet<Facultad> Facultad { get; set; }
-    }
+    }*/
 }

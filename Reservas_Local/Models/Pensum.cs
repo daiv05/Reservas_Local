@@ -9,16 +9,17 @@ namespace Reservas_Local.Models
 {
     public class Pensum
     {
-        [Key]
-        public String Nombre { get; set; }
+        public int PensumID { get; set; }
+        public String NombrePensum { get; set; }
         public String Anio { get; set; }
+
         public ICollection<Asignatura> Asignaturas { get; set; }
 
     }
-
+    /*
     public class PensumContext : DbContext
     {
         public PensumContext() { }
         public DbSet<Pensum> Pensum { get; set; }
-    }
+    }*/
 }

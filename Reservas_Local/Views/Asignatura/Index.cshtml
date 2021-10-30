@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Reservas_Local.Models.Asignatura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CicloAsignatura.TipoCiclo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PensumAsignatura.NombrePensum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prerrequisito.CodAsignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoAsignatura.AsignaturaTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodAsignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAsignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CicloAsignatura.TipoCiclo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PensumAsignatura.NombrePensum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prerrequisito.CodAsignatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoAsignatura.AsignaturaTipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodAsignatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAsignatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AsignaturaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AsignaturaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AsignaturaID })
+        </td>
+    </tr>
+}
+
+</table>

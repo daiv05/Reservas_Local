@@ -1,0 +1,50 @@
+﻿@model Reservas_Local.Models.Local
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Local</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Edificio.NombreEdif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edificio.NombreEdif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreLocal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Planta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Planta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Puntuacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Puntuacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LocalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

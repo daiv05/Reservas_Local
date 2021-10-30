@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Reservas_Local.Models.Local>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Edificio.NombreEdif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puntuacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edificio.NombreEdif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Planta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puntuacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LocalID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LocalID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LocalID })
+        </td>
+    </tr>
+}
+
+</table>

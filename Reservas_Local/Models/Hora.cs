@@ -9,14 +9,14 @@ namespace Reservas_Local.Models
 {
     public class Hora
     {
-        [Key]
+        public int HoraID { get; set; }
         public String HInicio { get; set; }
-        [Key]
         public String HFin { get; set; }
     }
+    /*
     public class HoraContext : DbContext
     {
         public HoraContext() { }
         public DbSet<Hora> Hora { get; set; }
-    }
+    }*/
 }

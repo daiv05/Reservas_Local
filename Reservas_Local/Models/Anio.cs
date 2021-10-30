@@ -9,13 +9,14 @@ namespace Reservas_Local.Models
 {
     public class Anio
     {
-        [Key]
+        public int AnioID { get; set; }
         public String AnioCurso { get; set; }
     }
 
+    /*
     public class AnioContext : DbContext
     {
         public AnioContext() { }
         public DbSet<Anio> Anio { get; set; }
-    }
+    }*/
 }

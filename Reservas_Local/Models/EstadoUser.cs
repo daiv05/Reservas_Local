@@ -9,14 +9,15 @@ namespace Reservas_Local.Models
 {
     public class EstadoUser
     {
-        [Key]
+        public int EstadoUserID { get; set; }
         public String Estado { get; set; }
     }
 
+    /*
     public class EstadoUserContext : DbContext
     {
         public EstadoUserContext() { }
         public DbSet<EstadoUser> EstadoUser { get; set; }
-    }
+    }*/
 
 }
