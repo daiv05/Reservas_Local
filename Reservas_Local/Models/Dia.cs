@@ -9,13 +9,13 @@ namespace Reservas_Local.Models
 {
     public class Dia
     {
-        [Key]
+        public int DiaID { get; set; }
         public String NombreDia { get; set; }
     }
-
+    /*
     public class DiaContext : DbContext
     {
         public DiaContext() { }
         public DbSet<Dia> Dia { get; set; }
-    }
+    }*/
 }

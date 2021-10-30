@@ -13,9 +13,10 @@ namespace Reservas_Local.Models
         public String HInicio { get; set; }
         public String HFin { get; set; }
     }
+    /*
     public class HoraContext : DbContext
     {
         public HoraContext() { }
         public DbSet<Hora> Hora { get; set; }
-    }
+    }*/
 }
