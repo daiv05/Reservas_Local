@@ -1,0 +1,56 @@
+﻿@model Reservas_Local.Models.Reserva
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividad.Ciclo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividad.Ciclo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocenteReserva.NombreDocente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocenteReserva.NombreDocente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreReserva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreReserva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aproved)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

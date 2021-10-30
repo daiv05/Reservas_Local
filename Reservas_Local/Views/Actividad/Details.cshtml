@@ -1,0 +1,50 @@
+﻿@model Reservas_Local.Models.Actividad
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Actividad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Anio.AnioCurso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anio.AnioCurso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignatura.CodAsignatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asignatura.CodAsignatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoActividad.ActividadTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoActividad.ActividadTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciclo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciclo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ActividadID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

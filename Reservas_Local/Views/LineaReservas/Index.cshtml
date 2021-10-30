@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Reservas_Local.Models.LineaReserva>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HorarioReserv.HorarioID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local.NombreLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SemanaCiclo.SemanaID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorarioReserv.HorarioID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local.NombreLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SemanaCiclo.SemanaID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LineaReservaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LineaReservaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LineaReservaID })
+        </td>
+    </tr>
+}
+
+</table>

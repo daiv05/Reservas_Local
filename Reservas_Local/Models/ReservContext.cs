@@ -25,9 +25,11 @@ namespace Reservas_Local.Models
         public DbSet<LineaReserva> LineaReserva { get; set; }
         public DbSet<Local> Local { get; set; }
         public DbSet<Pensum> Pensum { get; set; }
-        public DbSet<Reserva> Reserva { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Semana> Semana { get; set; }
         public DbSet<TipoAsignatura> TipoAsignatura { get; set; }
         public DbSet<Ubicacion> Ubicacion { get; set; }
+
+        public System.Data.Entity.DbSet<Reservas_Local.Models.Docente> Docentes { get; set; }
     }
 }

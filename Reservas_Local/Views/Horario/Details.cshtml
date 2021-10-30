@@ -1,0 +1,34 @@
+﻿@model Reservas_Local.Models.Horario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Horario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia.NombreDia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia.NombreDia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora.HInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora.HInicio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HorarioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

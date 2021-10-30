@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Reservas_Local.Models.Reserva>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Actividad.Ciclo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocenteReserva.NombreDocente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreReserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aproved)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actividad.Ciclo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocenteReserva.NombreDocente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreReserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aproved)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReservaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReservaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReservaID })
+        </td>
+    </tr>
+}
+
+</table>
