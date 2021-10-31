@@ -179,6 +179,7 @@
     <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReservaController.cs" />
+    <Compile Include="Controllers\VISTASController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -350,6 +351,15 @@
     <Content Include="Views\Reserva\Details.cshtml" />
     <Content Include="Views\Reserva\Edit.cshtml" />
     <Content Include="Views\Reserva\Index.cshtml" />
+    <Content Include="Views\VISTAS\MenuAdmin.cshtml" />
+    <Content Include="Views\VISTAS\ReporteLocal.cshtml" />
+    <Content Include="Views\VISTAS\ReporteEscuela.cshtml" />
+    <Content Include="Views\VISTAS\ReporteTotal.cshtml" />
+    <Content Include="Views\VISTAS\ModificarHorario.cshtml" />
+    <Content Include="Views\VISTAS\NuevoLocal.cshtml" />
+    <Content Include="Views\VISTAS\ActividadReserva.cshtml" />
+    <Content Include="Views\VISTAS\LocalHorario.cshtml" />
+    <Content Include="Views\VISTAS\MisReservas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110300720043_Initial.resx">
@@ -364,6 +374,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
