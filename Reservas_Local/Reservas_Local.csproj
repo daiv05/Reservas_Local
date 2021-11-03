@@ -349,11 +349,6 @@
     <Content Include="Views\LineaReservas\Details.cshtml" />
     <Content Include="Views\LineaReservas\Edit.cshtml" />
     <Content Include="Views\LineaReservas\Index.cshtml" />
-    <Content Include="Views\Local\Create.cshtml" />
-    <Content Include="Views\Local\Delete.cshtml" />
-    <Content Include="Views\Local\Details.cshtml" />
-    <Content Include="Views\Local\Edit.cshtml" />
-    <Content Include="Views\Local\Index.cshtml" />
     <Content Include="Views\Reserva\Create.cshtml" />
     <Content Include="Views\Reserva\Delete.cshtml" />
     <Content Include="Views\Reserva\Details.cshtml" />
@@ -363,11 +358,16 @@
     <Content Include="Views\VISTAS\ReporteLocal.cshtml" />
     <Content Include="Views\VISTAS\ReporteEscuela.cshtml" />
     <Content Include="Views\VISTAS\ReporteTotal.cshtml" />
-    <Content Include="Views\VISTAS\ModificarHorario.cshtml" />
+    <Content Include="Views\VISTAS\ModificarHoras.cshtml" />
     <Content Include="Views\VISTAS\NuevoLocal.cshtml" />
     <Content Include="Views\VISTAS\ActividadReserva.cshtml" />
     <Content Include="Views\VISTAS\LocalHorario.cshtml" />
     <Content Include="Views\VISTAS\MisReservas.cshtml" />
+    <Content Include="Views\Local\Create.cshtml" />
+    <Content Include="Views\Local\Delete.cshtml" />
+    <Content Include="Views\Local\Details.cshtml" />
+    <Content Include="Views\Local\Edit.cshtml" />
+    <Content Include="Views\Local\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110300720043_Initial.resx">
