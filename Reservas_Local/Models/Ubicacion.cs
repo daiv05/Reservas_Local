@@ -13,10 +13,4 @@ namespace Reservas_Local.Models
         public String Latitud { get; set; }
         public String Altitud { get; set; }
     }
-    /*
-    public class UbicacionContext : DbContext
-    {
-        public UbicacionContext() { }
-        public DbSet<Ubicacion> Ubicacion { get; set; }
-    }*/
 }

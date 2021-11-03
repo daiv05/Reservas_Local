@@ -187,6 +187,14 @@
     <Compile Include="Migrations\202110300720043_Initial.Designer.cs">
       <DependentUpon>202110300720043_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111030310181_seed11.cs" />
+    <Compile Include="Migrations\202111030310181_seed11.Designer.cs">
+      <DependentUpon>202111030310181_seed11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111030355127_localConUbi.cs" />
+    <Compile Include="Migrations\202111030355127_localConUbi.Designer.cs">
+      <DependentUpon>202111030355127_localConUbi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actividad.cs" />
@@ -364,6 +372,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110300720043_Initial.resx">
       <DependentUpon>202110300720043_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111030310181_seed11.resx">
+      <DependentUpon>202111030310181_seed11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111030355127_localConUbi.resx">
+      <DependentUpon>202111030355127_localConUbi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

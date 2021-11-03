@@ -12,7 +12,9 @@ namespace Reservas_Local.Models
     {
         public int LocalID { get; set; }
         public String NombreLocal { get; set; }
-        
+        public String Altitud { get; set; }
+        public String Latitud { get; set; }
+
         public int EdificioID { get; set; }
         public Edificio Edificio { get; set; }
 
