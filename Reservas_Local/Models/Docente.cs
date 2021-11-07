@@ -15,9 +15,7 @@ namespace Reservas_Local.Models
         public String Contrasenia { get; set; }
         public String NIT { get; set; }
         public String DUI { get; set; }
-
-        public int EstadoUserID { get; set; }
-        public EstadoUser EstadoUsuario { get; set; }
+        public String EstadoUser { get; set; }
 
         public ICollection<Reserva> MisReservas { get; set; }
     }

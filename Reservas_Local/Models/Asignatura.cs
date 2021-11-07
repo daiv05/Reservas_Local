@@ -28,10 +28,4 @@ namespace Reservas_Local.Models
         [ForeignKey("AsignaturaID")]
         public Asignatura Prerrequisito { get; set; }
     }
-    /*
-    public class AsignaturaContext : DbContext
-    {
-        public AsignaturaContext() { }
-        public DbSet<Asignatura> Asignatura { get; set; }
-    }*/
 }

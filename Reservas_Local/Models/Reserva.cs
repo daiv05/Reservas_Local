@@ -22,10 +22,4 @@ namespace Reservas_Local.Models
 
         public ICollection<LineaReserva> LineasReservas { get; set; }
     }
-    /*
-    public class ReservaContext : DbContext
-    {
-        public ReservaContext() { }
-        public DbSet<Reserva> Reserva { get; set; }
-    }*/
 }

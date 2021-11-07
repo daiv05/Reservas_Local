@@ -16,10 +16,4 @@ namespace Reservas_Local.Models
         public ICollection<Asignatura> Asignaturas { get; set; }
 
     }
-    /*
-    public class PensumContext : DbContext
-    {
-        public PensumContext() { }
-        public DbSet<Pensum> Pensum { get; set; }
-    }*/
 }

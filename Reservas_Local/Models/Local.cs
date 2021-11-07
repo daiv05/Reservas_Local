@@ -23,10 +23,4 @@ namespace Reservas_Local.Models
         public int Planta { get; set; }
         public double Puntuacion { get; set; }
     }
-    /*
-    public class LocalContext : DbContext
-    {
-        public LocalContext() { }
-        public DbSet<Local> Local { get; set; }
-    }*/
 }

@@ -13,10 +13,4 @@ namespace Reservas_Local.Models
         public String NombreFacu { get; set; }
         public ICollection<Escuela> Escuelas { get; set; }
     }
-    /*
-    public class FacultadContext : DbContext
-    {
-        public FacultadContext() { }
-        public DbSet<Facultad> Facultad { get; set; }
-    }*/
 }

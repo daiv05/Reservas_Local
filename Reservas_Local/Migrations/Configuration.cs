@@ -16,19 +16,6 @@ namespace Reservas_Local.Migrations
 
         protected override void Seed(Reservas_Local.Models.ReservContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-
             context.Ciclo.AddOrUpdate(
                 x => x.CicloID,
                 new Ciclo() { CicloID = 1, TipoCiclo = "Par" },
@@ -113,10 +100,10 @@ namespace Reservas_Local.Migrations
             context.Hora.AddOrUpdate(
                 x => x.HoraID,
                 new Hora() { HoraID = 1, HInicio = "6:00", HFin = "8:00" },
-                new Hora() { HoraID = 1, HInicio = "9:00", HFin = "10:00" },
-                new Hora() { HoraID = 1, HInicio = "11:00", HFin = "12:00" },
-                new Hora() { HoraID = 1, HInicio = "1:00", HFin = "2:00" },
-                new Hora() { HoraID = 1, HInicio = "3:00", HFin = "4:00" }
+                new Hora() { HoraID = 2, HInicio = "9:00", HFin = "10:00" },
+                new Hora() { HoraID = 3, HInicio = "11:00", HFin = "12:00" },
+                new Hora() { HoraID = 4, HInicio = "1:00", HFin = "2:00" },
+                new Hora() { HoraID = 5, HInicio = "3:00", HFin = "4:00" }
             );
 
 
@@ -140,6 +127,31 @@ namespace Reservas_Local.Migrations
                 new TipoActividad() { TipoActividadID = 1, ActividadTipo = "Practica" },
                 new TipoActividad() { TipoActividadID = 2, ActividadTipo = "Laboratorio" },
                 new TipoActividad() { TipoActividadID = 3, ActividadTipo = "Parcial" }
+            );
+            
+            context.Docentes.AddOrUpdate(
+                x => x.DocenteID,
+                new Docente() { DocenteID = 1, ApellidoDocente = "Admin", NombreDocente= "Admin", CorreoDocente= "admin@admin.com", Contrasenia= "Admin123@", DUI= "1234567", NIT= "98765432", EstadoUser= "Activo" },
+                new Docente() { DocenteID = 2, ApellidoDocente = "Hernan", NombreDocente = "Mario", CorreoDocente = "mario@mario.com", Contrasenia = "Mario123@", DUI = "9876544", NIT = "463463", EstadoUser= "Activo" }
+            );
+
+            context.Horario.AddOrUpdate(
+                x => x.HorarioID,
+                new Horario() { HorarioID = 1, DiaID = 1, HoraID = 1 },
+                new Horario() { HorarioID = 2, DiaID = 1, HoraID = 2 },
+                new Horario() { HorarioID = 3, DiaID = 1, HoraID = 3 },
+                new Horario() { HorarioID = 4, DiaID = 2, HoraID = 1 },
+                new Horario() { HorarioID = 5, DiaID = 2, HoraID = 2 },
+                new Horario() { HorarioID = 6, DiaID = 2, HoraID = 3 },
+                new Horario() { HorarioID = 7, DiaID = 3, HoraID = 1 },
+                new Horario() { HorarioID = 8, DiaID = 3, HoraID = 2 },
+                new Horario() { HorarioID = 9, DiaID = 3, HoraID = 3 },
+                new Horario() { HorarioID = 10, DiaID = 4, HoraID = 1 },
+                new Horario() { HorarioID = 11, DiaID = 4, HoraID = 2 },
+                new Horario() { HorarioID = 12, DiaID = 4, HoraID = 3 },
+                new Horario() { HorarioID = 13, DiaID = 5, HoraID = 1 },
+                new Horario() { HorarioID = 14, DiaID = 5, HoraID = 2 },
+                new Horario() { HorarioID = 15, DiaID = 5, HoraID = 3 }
             );
 
         }

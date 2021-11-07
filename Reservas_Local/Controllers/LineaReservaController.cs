@@ -10,18 +10,18 @@ using Reservas_Local.Models;
 
 namespace Reservas_Local.Controllers
 {
-    public class LineaReservasController : Controller
+    public class LineaReservaController : Controller
     {
         private ReservContext db = new ReservContext();
 
-        // GET: LineaReservas
+        // GET: LineaReserva
         public ActionResult Index()
         {
-            var lineaReserva = db.LineaReserva.Include(l => l.HorarioReserv).Include(l => l.Local).Include(l => l.SemanaCiclo);
+            var lineaReserva = db.LineaReserva.Include(l => l.HorarioReserv).Include(l => l.Local).Include(l => l.ReservaPadre).Include(l => l.SemanaCiclo);
             return View(lineaReserva.ToList());
         }
 
-        // GET: LineaReservas/Details/5
+        // GET: LineaReserva/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,21 +36,22 @@ namespace Reservas_Local.Controllers
             return View(lineaReserva);
         }
 
-        // GET: LineaReservas/Create
+        // GET: LineaReserva/Create
         public ActionResult Create()
         {
             ViewBag.HorarioID = new SelectList(db.Horario, "HorarioID", "HorarioID");
             ViewBag.LocalID = new SelectList(db.Local, "LocalID", "NombreLocal");
+            ViewBag.ReservaID = new SelectList(db.Reservas, "ReservaID", "NombreReserva");
             ViewBag.SemanaID = new SelectList(db.Semana, "SemanaID", "SemanaID");
             return View();
         }
 
-        // POST: LineaReservas/Create
+        // POST: LineaReserva/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LineaReservaID,LocalID,HorarioID,SemanaID")] LineaReserva lineaReserva)
+        public ActionResult Create([Bind(Include = "LineaReservaID,ReservaID,LocalID,HorarioID,SemanaID")] LineaReserva lineaReserva)
         {
             if (ModelState.IsValid)
             {
@@ -61,11 +62,12 @@ namespace Reservas_Local.Controllers
 
             ViewBag.HorarioID = new SelectList(db.Horario, "HorarioID", "HorarioID", lineaReserva.HorarioID);
             ViewBag.LocalID = new SelectList(db.Local, "LocalID", "NombreLocal", lineaReserva.LocalID);
+            ViewBag.ReservaID = new SelectList(db.Reservas, "ReservaID", "NombreReserva", lineaReserva.ReservaID);
             ViewBag.SemanaID = new SelectList(db.Semana, "SemanaID", "SemanaID", lineaReserva.SemanaID);
             return View(lineaReserva);
         }
 
-        // GET: LineaReservas/Edit/5
+        // GET: LineaReserva/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,16 +81,17 @@ namespace Reservas_Local.Controllers
             }
             ViewBag.HorarioID = new SelectList(db.Horario, "HorarioID", "HorarioID", lineaReserva.HorarioID);
             ViewBag.LocalID = new SelectList(db.Local, "LocalID", "NombreLocal", lineaReserva.LocalID);
+            ViewBag.ReservaID = new SelectList(db.Reservas, "ReservaID", "NombreReserva", lineaReserva.ReservaID);
             ViewBag.SemanaID = new SelectList(db.Semana, "SemanaID", "SemanaID", lineaReserva.SemanaID);
             return View(lineaReserva);
         }
 
-        // POST: LineaReservas/Edit/5
+        // POST: LineaReserva/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LineaReservaID,LocalID,HorarioID,SemanaID")] LineaReserva lineaReserva)
+        public ActionResult Edit([Bind(Include = "LineaReservaID,ReservaID,LocalID,HorarioID,SemanaID")] LineaReserva lineaReserva)
         {
             if (ModelState.IsValid)
             {
@@ -98,11 +101,12 @@ namespace Reservas_Local.Controllers
             }
             ViewBag.HorarioID = new SelectList(db.Horario, "HorarioID", "HorarioID", lineaReserva.HorarioID);
             ViewBag.LocalID = new SelectList(db.Local, "LocalID", "NombreLocal", lineaReserva.LocalID);
+            ViewBag.ReservaID = new SelectList(db.Reservas, "ReservaID", "NombreReserva", lineaReserva.ReservaID);
             ViewBag.SemanaID = new SelectList(db.Semana, "SemanaID", "SemanaID", lineaReserva.SemanaID);
             return View(lineaReserva);
         }
 
-        // GET: LineaReservas/Delete/5
+        // GET: LineaReserva/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -117,7 +121,7 @@ namespace Reservas_Local.Controllers
             return View(lineaReserva);
         }
 
-        // POST: LineaReservas/Delete/5
+        // POST: LineaReserva/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
