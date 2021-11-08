@@ -175,7 +175,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HoraController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
-    <Compile Include="Controllers\LineaReservasController.cs" />
+    <Compile Include="Controllers\LineaReservaController.cs" />
     <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReservaController.cs" />
@@ -186,6 +186,22 @@
     <Compile Include="Migrations\202110300720043_Initial.cs" />
     <Compile Include="Migrations\202110300720043_Initial.Designer.cs">
       <DependentUpon>202110300720043_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111030310181_seed11.cs" />
+    <Compile Include="Migrations\202111030310181_seed11.Designer.cs">
+      <DependentUpon>202111030310181_seed11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111030355127_localConUbi.cs" />
+    <Compile Include="Migrations\202111030355127_localConUbi.Designer.cs">
+      <DependentUpon>202111030355127_localConUbi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111071657046_userSinEstado.cs" />
+    <Compile Include="Migrations\202111071657046_userSinEstado.Designer.cs">
+      <DependentUpon>202111071657046_userSinEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111071815197_reserva-linea-relation.cs" />
+    <Compile Include="Migrations\202111071815197_reserva-linea-relation.Designer.cs">
+      <DependentUpon>202111071815197_reserva-linea-relation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -336,16 +352,6 @@
     <Content Include="Views\Horario\Details.cshtml" />
     <Content Include="Views\Horario\Edit.cshtml" />
     <Content Include="Views\Horario\Index.cshtml" />
-    <Content Include="Views\LineaReservas\Create.cshtml" />
-    <Content Include="Views\LineaReservas\Delete.cshtml" />
-    <Content Include="Views\LineaReservas\Details.cshtml" />
-    <Content Include="Views\LineaReservas\Edit.cshtml" />
-    <Content Include="Views\LineaReservas\Index.cshtml" />
-    <Content Include="Views\Local\Create.cshtml" />
-    <Content Include="Views\Local\Delete.cshtml" />
-    <Content Include="Views\Local\Details.cshtml" />
-    <Content Include="Views\Local\Edit.cshtml" />
-    <Content Include="Views\Local\Index.cshtml" />
     <Content Include="Views\Reserva\Create.cshtml" />
     <Content Include="Views\Reserva\Delete.cshtml" />
     <Content Include="Views\Reserva\Details.cshtml" />
@@ -355,15 +361,37 @@
     <Content Include="Views\VISTAS\ReporteLocal.cshtml" />
     <Content Include="Views\VISTAS\ReporteEscuela.cshtml" />
     <Content Include="Views\VISTAS\ReporteTotal.cshtml" />
-    <Content Include="Views\VISTAS\ModificarHorario.cshtml" />
+    <Content Include="Views\VISTAS\ModificarHoras.cshtml" />
     <Content Include="Views\VISTAS\NuevoLocal.cshtml" />
     <Content Include="Views\VISTAS\ActividadReserva.cshtml" />
     <Content Include="Views\VISTAS\LocalHorario.cshtml" />
     <Content Include="Views\VISTAS\MisReservas.cshtml" />
+    <Content Include="Views\Local\Create.cshtml" />
+    <Content Include="Views\Local\Delete.cshtml" />
+    <Content Include="Views\Local\Details.cshtml" />
+    <Content Include="Views\Local\Edit.cshtml" />
+    <Content Include="Views\Local\Index.cshtml" />
+    <Content Include="Views\LineaReserva\Create.cshtml" />
+    <Content Include="Views\LineaReserva\Delete.cshtml" />
+    <Content Include="Views\LineaReserva\Details.cshtml" />
+    <Content Include="Views\LineaReserva\Edit.cshtml" />
+    <Content Include="Views\LineaReserva\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110300720043_Initial.resx">
       <DependentUpon>202110300720043_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111030310181_seed11.resx">
+      <DependentUpon>202111030310181_seed11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111030355127_localConUbi.resx">
+      <DependentUpon>202111030355127_localConUbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111071657046_userSinEstado.resx">
+      <DependentUpon>202111071657046_userSinEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111071815197_reserva-linea-relation.resx">
+      <DependentUpon>202111071815197_reserva-linea-relation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

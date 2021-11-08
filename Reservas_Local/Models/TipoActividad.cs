@@ -13,11 +13,4 @@ namespace Reservas_Local.Models
         public int TipoActividadID { get; set; }
         public String ActividadTipo { get; set; }
     }
-
-    /*
-    public class TipoActividadContext : DbContext
-    {
-        public TipoActividadContext() { }
-        public DbSet<TipoActividad> TipoActividad { get; set; }
-    }*/
 }

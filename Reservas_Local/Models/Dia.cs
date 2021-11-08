@@ -12,10 +12,4 @@ namespace Reservas_Local.Models
         public int DiaID { get; set; }
         public String NombreDia { get; set; }
     }
-    /*
-    public class DiaContext : DbContext
-    {
-        public DiaContext() { }
-        public DbSet<Dia> Dia { get; set; }
-    }*/
 }

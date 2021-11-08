@@ -19,11 +19,4 @@ namespace Reservas_Local.Models
         public Dia Dia { get; set; }
 
     }
-
-    /*
-        public class HorarioContext : DbContext
-    {
-        public HorarioContext() { }
-        public DbSet<Horario> Horario { get; set; }
-    }*/
 }

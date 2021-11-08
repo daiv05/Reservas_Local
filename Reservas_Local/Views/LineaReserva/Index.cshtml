@@ -18,6 +18,9 @@
             @Html.DisplayNameFor(model => model.Local.NombreLocal)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.ReservaPadre.NombreReserva)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.SemanaCiclo.SemanaID)
         </th>
         <th></th>
@@ -30,6 +33,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Local.NombreLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReservaPadre.NombreReserva)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SemanaCiclo.SemanaID)

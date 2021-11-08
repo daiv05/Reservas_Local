@@ -48,7 +48,7 @@ namespace Reservas_Local.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LocalID,NombreLocal,EdificioID,Planta,Puntuacion")] Local local)
+        public ActionResult Create([Bind(Include = "LocalID,NombreLocal,Altitud,Latitud,EdificioID,Planta,Puntuacion")] Local local)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace Reservas_Local.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LocalID,NombreLocal,EdificioID,Planta,Puntuacion")] Local local)
+        public ActionResult Edit([Bind(Include = "LocalID,NombreLocal,Altitud,Latitud,EdificioID,Planta,Puntuacion")] Local local)
         {
             if (ModelState.IsValid)
             {

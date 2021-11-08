@@ -4,4 +4,144 @@
 }
 
 <h2>MenuAdmin</h2>
+<html>
+<head>
+    <title>Menu Desplegable</title>
+    
+    
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
 
+        }
+        body{
+
+            font-family:Calibri;
+        }
+        header{
+            background: #03A9F;
+            width: 100%;
+            clear: both;
+            content: '';
+            display: table;
+        }
+        nav{
+            float.rigth;
+        }
+        .menu{
+            width:900px;
+            margin: 0 auto;
+        }
+        nav ul li{
+            list-style: none;
+            margin-left: 25px;
+            padding: 12px 0;
+            float:left;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+
+        }
+
+        nav ul li a::before{
+            display: block;
+            content:'';
+            width: 0%;
+            background: #444;
+            height: 5px;
+            top:0;
+            position: absolute;
+            transition: width 0.2s;
+        }
+
+            nav ul li a:hover:before {
+
+                width: 100%;
+
+            }
+
+
+            #main-container{
+                margin: 150px auto;
+                width: 600px;
+
+            }
+            table{
+                width:100%;
+                text-align:left;
+                border-collapse: collapse;
+            }
+
+            th, td{
+                padding:20px;
+            }
+            thead{
+                border-bottom: solid 5px #0F362D;
+
+            }
+            tr:nth-child(even);{
+                background-color: #ddd;
+
+            }
+
+            tr:hover td{
+
+               background-color:#36981;
+               color:blue;
+            }
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class = "menu">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Modificar horarios</a></li>
+                    <li><a href="">Registrar nuevo local</a></li>
+                    <li><a href="">Reporte por local</a></li>
+                    <li><a href="">Reporte por escuela</a></li>
+                    <li><a href="">Reporte total de la facultad</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div id="main-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Actividad</th>
+                <th>Ciclo</th>
+                <th>Detalles de local</th>
+                <th>Horarios</th>
+                <th>Aprobar</th>
+            </tr>
+
+        </thead>
+
+        <tr>
+            <td>Parcial</td>
+            <td>II</td>
+            <td>C2</td>
+            <td>6:00am-8:00am</td>
+            <td><label class="form-control"><input type="radio" name="radio"/>Si</label>
+                <label class="form-control"><input type="radio" name="radio" />No</label>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>

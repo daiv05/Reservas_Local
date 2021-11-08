@@ -8,11 +8,4 @@ namespace Reservas_Local.Models
         public int TipoAsignaturaID { get; set; }
         public string AsignaturaTipo { get; set; }
     }
-
-    /*
-    public class TipoAsignaturaContext : DbContext
-    {
-        public TipoAsignaturaContext() { }
-        public DbSet<TipoAsignatura> TipoAsignatura { get; set; }
-    }*/
 }

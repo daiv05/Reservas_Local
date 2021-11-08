@@ -16,10 +16,4 @@ namespace Reservas_Local.Models
         public int PensumID { get; set; }
         public Pensum PensumCarrera { get; set; }
     }
-    /*
-    public class CarreraContext : DbContext
-    {
-        public CarreraContext() { }
-        public DbSet<Carrera> Carrera { get; set; }
-    }*/
 }

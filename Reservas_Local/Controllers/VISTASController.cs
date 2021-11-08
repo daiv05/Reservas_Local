@@ -28,7 +28,7 @@ namespace Reservas_Local.Controllers
             return View();
         }
 
-        public ActionResult ModificarHorario()
+        public ActionResult ModificarHoras()
         {
             return View();
         }

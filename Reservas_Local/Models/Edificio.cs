@@ -21,10 +21,4 @@ namespace Reservas_Local.Models
         public ICollection<Local> Locales { get; set; }
 
     }
-    /*
-    public class EdificioContext : DbContext
-    {
-        public EdificioContext() { }
-        public DbSet<Edificio> Edificio { get; set; }
-    }*/
 }

@@ -17,10 +17,4 @@ namespace Reservas_Local.Models
         public Local Local { get; set; }
 
     }
-    /*
-    public class FotografiaContext : DbContext
-    {
-        public FotografiaContext() { }
-        public DbSet<Fotografia> Fotografia { get; set; }
-    }*/
 }

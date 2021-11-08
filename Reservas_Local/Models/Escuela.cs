@@ -18,10 +18,4 @@ namespace Reservas_Local.Models
 
         public ICollection<Edificio> Edificios { get; set; }
     }
-    /*
-    public class EscuelaContext : DbContext
-    {
-        public EscuelaContext() { }
-        public DbSet<Escuela> Escuela { get; set; }
-    }*/
 }

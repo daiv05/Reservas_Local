@@ -12,10 +12,4 @@ namespace Reservas_Local.Models
         public int CicloID { get; set; }
         public String TipoCiclo { get; set; }
     }
-    /*
-    public class CicloContext : DbContext
-    {
-        public CicloContext() { }
-        public DbSet<Ciclo> Ciclo { get; set; }
-    }*/
 }

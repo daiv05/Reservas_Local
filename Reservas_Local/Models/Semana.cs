@@ -12,10 +12,4 @@ namespace Reservas_Local.Models
         public int SemanaID { get; set; }
         public int numSemana { get; set; }
     }
-    /*
-    public class SemanaContext : DbContext
-    {
-        public SemanaContext() { }
-        public DbSet<Semana> Semana { get; set; }
-    }*/
 }

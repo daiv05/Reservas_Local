@@ -12,7 +12,9 @@ namespace Reservas_Local.Models
     {
         public int LocalID { get; set; }
         public String NombreLocal { get; set; }
-        
+        public String Altitud { get; set; }
+        public String Latitud { get; set; }
+
         public int EdificioID { get; set; }
         public Edificio Edificio { get; set; }
 
@@ -21,10 +23,4 @@ namespace Reservas_Local.Models
         public int Planta { get; set; }
         public double Puntuacion { get; set; }
     }
-    /*
-    public class LocalContext : DbContext
-    {
-        public LocalContext() { }
-        public DbSet<Local> Local { get; set; }
-    }*/
 }
